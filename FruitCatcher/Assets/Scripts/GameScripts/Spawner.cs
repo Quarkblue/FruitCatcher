@@ -9,28 +9,31 @@ public class Spawner : MonoBehaviour
 
     public float xBounds;
     public float yBound;
+    public float objectSpeed; // Add this variable for speed
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("SpawnRandomGameObject");
-        
     }
+
     IEnumerator SpawnRandomGameObject()
     {
+        yield return new WaitForSeconds(Random.Range(1, 2));
 
-        yield return new WaitForSeconds(Random.Range(1,2));
+        int randomFruit = Random.Range(0, fruits.Length);
 
-        int randomFruit = Random.Range(0, fruits.Length);  
+        GameObject spawnedObject;
 
-        if(Random.value<= .6f)
-            Instantiate(fruits[randomFruit], new Vector2(Random.Range(-xBounds,xBounds),yBound), Quaternion.identity);
-
+        if (Random.value <= 0.6f)
+            spawnedObject = Instantiate(fruits[randomFruit], new Vector2(Random.Range(-xBounds, xBounds), yBound), Quaternion.identity);
         else
-            Instantiate(bomb, new Vector2(Random.Range(-xBounds,xBounds),yBound), Quaternion.identity); 
+            spawnedObject = Instantiate(bomb, new Vector2(Random.Range(-xBounds, xBounds), yBound), Quaternion.identity);
 
-        StartCoroutine("SpawnRandomGameObject");    
+        // Set the speed of the spawned object
+        spawnedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -objectSpeed);
+
+        StartCoroutine("SpawnRandomGameObject");
     }
-
-
 
 }
