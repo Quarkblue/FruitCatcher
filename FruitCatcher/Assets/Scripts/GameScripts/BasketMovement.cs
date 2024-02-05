@@ -7,10 +7,15 @@ public class BasketMovement : MonoBehaviour
     private Rigidbody2D rb;
     public float speed,xBound;
     // Start is called before the first frame update
+
+    public BasketMovement Instance;
+    public bool StartRecieving = false;
+
+    public string movement;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        StartRecieving = true;
         
     }
 
@@ -19,15 +24,15 @@ public class BasketMovement : MonoBehaviour
     {
         float h= Input.GetAxisRaw("Horizontal");    
 
-        if(h>0)
+        if(h>0 || movement == "right hand up")
         {
             rb.velocity = Vector2.right * speed;
         }
-        else if(h<0)
+        else if(h<0 || movement == "left hand up")
         {
             rb.velocity = Vector2.left * speed;
         }
-        else
+        else if(h == 0 || movement == "both hands down")
         {
             rb.velocity = Vector2.zero;
         }   
