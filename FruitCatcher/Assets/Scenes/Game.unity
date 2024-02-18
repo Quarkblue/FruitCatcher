@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 25
   xBound: 57
-  Instance: {fileID: 0}
+  Instance: {fileID: 12887443}
   StartRecieving: 0
   movement: 
 --- !u!114 &12887444
@@ -306,7 +306,7 @@ MonoBehaviour:
   startRecieve: 1
   printToConsole: 1
   data: 
-  basketMovement: {fileID: 0}
+  basketMovement: {fileID: 12887443}
 --- !u!1 &70889713
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -227.00003, y: 12}
+  m_AnchoredPosition: {x: -227, y: 12}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159593608
@@ -1098,7 +1098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -235.00003, y: -29}
+  m_AnchoredPosition: {x: -235, y: -29}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054678227
