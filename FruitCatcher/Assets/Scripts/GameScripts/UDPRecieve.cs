@@ -40,8 +40,10 @@ public class UDPRecieve : MonoBehaviour
         client = new UdpClient(port);
         while (startRecieve)
         {
+            
             if (basketMovement.Instance.StartRecieving)
             {
+                Debug.Log("recieving");
                 try
                 {
                     IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);

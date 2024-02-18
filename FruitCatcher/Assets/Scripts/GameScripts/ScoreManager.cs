@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(target.tag == "Bomb")
         {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);    
+           SceneManager.LoadScene("MainMenu");    
         }   
         
     }
