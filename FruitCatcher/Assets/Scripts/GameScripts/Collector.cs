@@ -8,7 +8,7 @@ public class Collector : MonoBehaviour
     {
         if(target.tag == "Fruit"|| target.tag=="Bomb")
         {
-            Destroy(target.gameObject); 
+            Destroy(target.gameObject);
         }
     }
 }

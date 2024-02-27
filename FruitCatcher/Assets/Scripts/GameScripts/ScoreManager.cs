@@ -31,7 +31,7 @@ public class ScoreManager : MonoBehaviour
         if(target.tag == "Bomb")
         {
             GameOver.totalScore = score;
-            SceneManager.LoadScene("GameOver");    
+            EventManager.GameOver();
         }   
         
     }

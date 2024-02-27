@@ -12,11 +12,23 @@ public class BasketMovement : MonoBehaviour
     public bool StartRecieving = false;
 
     public string movement;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.HasKey("Speed"))
+        {
+            speed = PlayerPrefs.GetInt("Speed");
+        }
+        else
+        {
+            speed = 25;
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         StartRecieving = true;
-        
     }
 
     // Update is called once per frame
