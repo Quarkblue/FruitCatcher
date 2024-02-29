@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
 
-    private int score;
+    public int score;
 
     public GameObject hat;
     
@@ -30,7 +30,6 @@ public class ScoreManager : MonoBehaviour
     {
         if(target.tag == "Bomb")
         {
-            GameOver.totalScore = score;
             EventManager.GameOver();
         }   
         
